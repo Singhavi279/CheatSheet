@@ -144,3 +144,54 @@ SELECT c1, c2 FROM t
 WHERE c1 IS [NOT] NULL;
 --Check if values in a table is NULL or not
 ```
+
+## MANAGING TABLES
+
+```SQL
+CREATE TABLE t (
+id INT PRIMARY KEY,
+name VARCHAR NOT NULL,
+price INT DEFAULT 0
+);
+--Create a new table with three columns
+```
+
+```SQL
+DROP TABLE t ;
+Delete the table from the database
+```
+
+```SQL
+ALTER TABLE t ADD column;
+--Add a new column to the table
+```
+
+```SQL
+ALTER TABLE t DROP COLUMN c ;
+--Drop column c from the table
+```
+
+```SQL
+ALTER TABLE t ADD constraint;
+--Add a constraint
+```
+
+```SQL
+ALTER TABLE t DROP constraint;
+--Drop a constraint
+```
+
+```SQL
+ALTER TABLE t1 RENAME TO t2;
+--Rename a table from t1 to t2
+```
+
+```SQL
+ALTER TABLE t1 RENAME c1 TO c2 ;
+--Rename column c1 to c2
+```
+
+```SQL
+TRUNCATE TABLE t;
+--Remove all data in a table
+```
