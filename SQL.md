@@ -97,3 +97,50 @@ FROM t1 A
 INNER JOIN t2 B ON condition;
 --Join t1 to itself using INNER JOIN clause
 ```
+
+## USING SQL OPERATORS
+
+```SQL
+SELECT c1, c2 FROM t1
+UNION [ALL]
+SELECT c1, c2 FROM t2;
+--Combine rows from two queries
+```
+
+```SQL
+SELECT c1, c2 FROM t1
+INTERSECT
+SELECT c1, c2 FROM t2;
+--Return the intersection of two queries
+```
+
+```SQL
+SELECT c1, c2 FROM t1
+MINUS
+SELECT c1, c2 FROM t2;
+--Subtract a result set from another result set
+```
+
+```SQL
+SELECT c1, c2 FROM t1
+WHERE c1 [NOT] LIKE pattern;
+--Query rows using pattern matching %, _
+```
+
+```SQL
+SELECT c1, c2 FROM t
+WHERE c1 [NOT] IN value_list;
+--Query rows in a list
+```
+
+```SQL
+SELECT c1, c2 FROM t
+WHERE c1 BETWEEN low AND high;
+--Query rows between two values
+```
+
+```SQL
+SELECT c1, c2 FROM t
+WHERE c1 IS [NOT] NULL;
+--Check if values in a table is NULL or not
+```
