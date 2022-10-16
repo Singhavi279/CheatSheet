@@ -195,3 +195,30 @@ ALTER TABLE t1 RENAME c1 TO c2 ;
 TRUNCATE TABLE t;
 --Remove all data in a table
 ```
+
+## USING SQL CONSTRAINTS
+
+```SQL 
+  CREATE TABLE t(c1 INT,c2 INT,C3 VARCHAR, PRIMARY KEY(c1,c2));
+  --Set c1 and c2 as a primary key
+```
+
+```SQL
+CREATE TABLE t1(c1 INT PRIMARY KEY,c2 INT,FOREIGN KEY (c2) REFERENCES t2(c2));
+--Set c2 column as a foreign key
+```
+
+```SQL
+CREATE TABLE t(c1 INT, c1 INT,UNIQUE(c2,c3));
+--Make the values in c1 and c2 unique
+```
+
+```SQL
+CREATE TABLE t(c1 INT, c2 INT,CHECK(c1> 0 AND c1 >= c2));
+--Ensure c1 > 0 and values in c1 >= c2
+```
+
+```SQL
+CREATE TABLE t(c1 INT PRIMARY KEY,c2 VARCHAR NOT NULL);
+--Set values in c2 column not NULL
+```
