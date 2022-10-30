@@ -10,3 +10,4 @@
 - CSS
 - JavaScript
 - SQL Queries:  (https://github.com/Singhavi279/CheatSheet/blob/main/SQL.md)
+- R Programming: (https://github.com/Singhavi279/CheatSheet/blob/main/r-cheatsheet.md)
